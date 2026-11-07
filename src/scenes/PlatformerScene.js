@@ -5,6 +5,7 @@ const GAME_HEIGHT = 540;
 const TILE_SIZE = 36;
 const WORLD_WIDTH = 2232;
 const FLOOR_Y = 450;
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 export default class PlatformerScene extends Phaser.Scene {
   constructor() {
@@ -19,22 +20,22 @@ export default class PlatformerScene extends Phaser.Scene {
   preload() {
     this.load.spritesheet(
       'player',
-      '/assets/kenney/pixel-platformer/Tilemap/tilemap-characters_packed.png',
+      assetUrl('assets/kenney/pixel-platformer/Tilemap/tilemap-characters_packed.png'),
       { frameWidth: 24, frameHeight: 24 },
     );
 
-    this.load.image('grass-left', '/assets/kenney/pixel-platformer/Tiles/tile_0021.png');
-    this.load.image('grass-middle', '/assets/kenney/pixel-platformer/Tiles/tile_0022.png');
-    this.load.image('grass-right', '/assets/kenney/pixel-platformer/Tiles/tile_0023.png');
-    this.load.image('dirt', '/assets/kenney/pixel-platformer/Tiles/tile_0122.png');
+    this.load.image('grass-left', assetUrl('assets/kenney/pixel-platformer/Tiles/tile_0021.png'));
+    this.load.image('grass-middle', assetUrl('assets/kenney/pixel-platformer/Tiles/tile_0022.png'));
+    this.load.image('grass-right', assetUrl('assets/kenney/pixel-platformer/Tiles/tile_0023.png'));
+    this.load.image('dirt', assetUrl('assets/kenney/pixel-platformer/Tiles/tile_0122.png'));
 
     this.load.image(
       'stone-block',
-      '/assets/kenney/pixel-platformer-blocks/Tiles/Stone/tile_0018.png',
+      assetUrl('assets/kenney/pixel-platformer-blocks/Tiles/Stone/tile_0018.png'),
     );
     this.load.image(
       'treat',
-      '/assets/kenney/pixel-platformer-food-expansion/Tiles/tile_0040.png',
+      assetUrl('assets/kenney/pixel-platformer-food-expansion/Tiles/tile_0040.png'),
     );
   }
 
