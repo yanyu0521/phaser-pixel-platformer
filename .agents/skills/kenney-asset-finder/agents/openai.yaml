@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kenney Asset Finder"
+  short_description: "Find Kenney assets that fit a game project"
+  default_prompt: "Use $kenney-asset-finder to find Kenney assets for this game feature."
